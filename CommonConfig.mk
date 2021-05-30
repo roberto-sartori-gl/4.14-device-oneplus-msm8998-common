@@ -12,10 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
--include device/sony/customization/Customization.mk
-
 # Common path
-COMMON_PATH := device/sony/common
+COMMON_PATH := device/oneplus/msm8998-common
 
 # Do not build proprietary capability
 TARGET_USES_AOSP := true
@@ -56,9 +54,6 @@ TARGET_2ND_CPU_VARIANT := generic
 # Use mke2fs to create ext4 images
 TARGET_USES_MKE2FS := true
 TARGET_USERIMAGES_USE_EXT4 := true
-
-BOARD_ROOT_EXTRA_FOLDERS := odm
-BOARD_ROOT_EXTRA_SYMLINKS += /mnt/vendor/persist:/persist
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs

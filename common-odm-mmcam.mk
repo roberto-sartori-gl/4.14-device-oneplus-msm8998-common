@@ -1,5 +1,4 @@
 # MMCamera Framework
-ifneq ($(filter loire tone yoshino nile ganges seine,$(SOMC_PLATFORM)),)
 PRODUCT_PACKAGES += \
     libflash_pmic \
     libmmcamera_dbg \
@@ -131,28 +130,7 @@ PRODUCT_PACKAGES += \
     libmmcamera_isp_scaler_viewfinder44 \
     libmmcamera_isp_scaler_viewfinder46 \
     libmmcamera_isp_wb40
-endif
 
-ifneq ($(filter loire tone,$(SOMC_PLATFORM)),)
-PRODUCT_PACKAGES += \
-    libactuator_lc898217 \
-    libactuator_lc898217xc \
-    libchromatix_imx214_common \
-    libchromatix_imx214_cpp_liveshot \
-    libchromatix_imx214_cpp_preview \
-    libchromatix_imx214_cpp_snapshot \
-    libchromatix_imx214_cpp_video \
-    libchromatix_imx214_liveshot \
-    libchromatix_imx214_postproc \
-    libchromatix_imx214_preview \
-    libchromatix_imx214_snapshot \
-    libchromatix_imx214_video \
-    libchromatix_imx214_default_preview_lc898217 \
-    libchromatix_imx214_default_video_lc898217 \
-    libmmcamera_imx214
-endif
-
-ifneq ($(filter yoshino nile,$(SOMC_PLATFORM)),)
 PRODUCT_PACKAGES += \
     libchromatix_imx219_common \
     libchromatix_imx219_cpp_liveshot \
@@ -167,26 +145,7 @@ PRODUCT_PACKAGES += \
     libchromatix_imx219_default_preview \
     libchromatix_imx219_default_video \
     libmmcamera_imx219
-endif
 
-ifneq ($(filter loire,$(SOMC_PLATFORM)),)
-PRODUCT_PACKAGES += \
-    libchromatix_imx241_common \
-    libchromatix_imx241_cpp_liveshot \
-    libchromatix_imx241_cpp_preview \
-    libchromatix_imx241_cpp_snapshot \
-    libchromatix_imx241_cpp_video \
-    libchromatix_imx241_postproc \
-    libchromatix_imx241_liveshot \
-    libchromatix_imx241_preview \
-    libchromatix_imx241_snapshot \
-    libchromatix_imx241_video \
-    libchromatix_imx241_default_preview \
-    libchromatix_imx241_default_video \
-    libmmcamera_imx241
-endif
-
-ifneq ($(filter yoshino,$(SOMC_PLATFORM)),)
 PRODUCT_PACKAGES += \
     libactuator_lc898217xc \
     libchromatix_imx258_common \
@@ -202,9 +161,7 @@ PRODUCT_PACKAGES += \
     libchromatix_imx258_default_preview_lc898217 \
     libchromatix_imx258_default_video_lc898217 \
     libmmcamera_imx258
-endif
 
-ifneq ($(filter loire tone nile,$(SOMC_PLATFORM)),)
 PRODUCT_PACKAGES += \
     libactuator_bu64747BS4 \
     libchromatix_imx300_common \
@@ -220,9 +177,7 @@ PRODUCT_PACKAGES += \
     libchromatix_imx300_default_preview_bu64747 \
     libchromatix_imx300_default_video_bu64747 \
     libmmcamera_imx300
-endif
 
-ifneq ($(filter yoshino,$(SOMC_PLATFORM)),)
 PRODUCT_PACKAGES += \
     libactuator_bu64747BS2 \
     libchromatix_imx400_common \
@@ -238,143 +193,3 @@ PRODUCT_PACKAGES += \
     libchromatix_imx400_default_preview_bu64747 \
     libchromatix_imx400_default_video_bu64747 \
     libmmcamera_imx400
-endif
-
-ifneq ($(filter ganges seine,$(SOMC_PLATFORM)),)
-PRODUCT_PACKAGES += \
-    libactuator_lc898219xi \
-    libchromatix_imx486_common \
-    libchromatix_imx486_cpp_liveshot \
-    libchromatix_imx486_cpp_preview \
-    libchromatix_imx486_cpp_snapshot \
-    libchromatix_imx486_cpp_video \
-    libchromatix_imx486_postproc \
-    libchromatix_imx486_liveshot \
-    libchromatix_imx486_preview \
-    libchromatix_imx486_snapshot \
-    libchromatix_imx486_video \
-    libchromatix_imx486_zsl_preview \
-    libchromatix_imx486_zsl_video \
-    libmmcamera_imx486
-endif
-
-ifneq ($(filter ganges,$(SOMC_PLATFORM)),)
-PRODUCT_PACKAGES += \
-    libactuator_lc898214xd \
-    libchromatix_s5k3l6_common \
-    libchromatix_s5k3l6_cpp_liveshot \
-    libchromatix_s5k3l6_cpp_preview \
-    libchromatix_s5k3l6_cpp_snapshot \
-    libchromatix_s5k3l6_cpp_video \
-    libchromatix_s5k3l6_postproc \
-    libchromatix_s5k3l6_liveshot \
-    libchromatix_s5k3l6_preview \
-    libchromatix_s5k3l6_snapshot \
-    libchromatix_s5k3l6_video \
-    libchromatix_s5k3l6_zsl_preview \
-    libchromatix_s5k3l6_zsl_video \
-    libmmcamera_s5k3l6
-endif
-
-ifneq ($(filter ganges,$(SOMC_PLATFORM)),)
-PRODUCT_PACKAGES += \
-    libactuator_lc898214xc \
-    libchromatix_s5k4h8_common \
-    libchromatix_s5k4h8_cpp_liveshot \
-    libchromatix_s5k4h8_cpp_preview \
-    libchromatix_s5k4h8_cpp_snapshot \
-    libchromatix_s5k4h8_cpp_video \
-    libchromatix_s5k4h8_postproc \
-    libchromatix_s5k4h8_liveshot \
-    libchromatix_s5k4h8_preview \
-    libchromatix_s5k4h8_snapshot \
-    libchromatix_s5k4h8_video \
-    libchromatix_s5k4h8_zsl_preview \
-    libchromatix_s5k4h8_zsl_video \
-    libmmcamera_s5k4h8
-endif
-
-ifneq ($(filter ganges,$(SOMC_PLATFORM)),)
-PRODUCT_PACKAGES += \
-    libchromatix_s5k4e8_common \
-    libchromatix_s5k4e8_cpp_liveshot \
-    libchromatix_s5k4e8_cpp_preview \
-    libchromatix_s5k4e8_cpp_snapshot \
-    libchromatix_s5k4e8_cpp_video \
-    libchromatix_s5k4e8_postproc \
-    libchromatix_s5k4e8_liveshot \
-    libchromatix_s5k4e8_preview \
-    libchromatix_s5k4e8_snapshot \
-    libchromatix_s5k4e8_video \
-    libchromatix_s5k4e8_zsl_preview \
-    libchromatix_s5k4e8_zsl_video \
-    libmmcamera_s5k4e8
-endif
-
-
-ifneq ($(filter ganges,$(SOMC_PLATFORM)),)
-PRODUCT_PACKAGES += \
-    libchromatix_s5k4h7yx_common \
-    libchromatix_s5k4h7yx_cpp_liveshot \
-    libchromatix_s5k4h7yx_cpp_preview \
-    libchromatix_s5k4h7yx_cpp_snapshot \
-    libchromatix_s5k4h7yx_cpp_video \
-    libchromatix_s5k4h7yx_postproc \
-    libchromatix_s5k4h7yx_liveshot \
-    libchromatix_s5k4h7yx_preview \
-    libchromatix_s5k4h7yx_snapshot \
-    libchromatix_s5k4h7yx_video \
-    libchromatix_s5k4h7yx_zsl_preview \
-    libchromatix_s5k4h7yx_zsl_video \
-    libmmcamera_s5k4h7yx
-endif
-
-ifneq ($(filter seine,$(SOMC_PLATFORM)),)
-PRODUCT_PACKAGES += \
-    libactuator_dw9768_tele \
-    libchromatix_s5k4h7yx_front_common \
-    libchromatix_s5k4h7yx_front_cpp_liveshot \
-    libchromatix_s5k4h7yx_front_cpp_preview \
-    libchromatix_s5k4h7yx_front_cpp_snapshot \
-    libchromatix_s5k4h7yx_front_cpp_video \
-    libchromatix_s5k4h7yx_front_postproc \
-    libchromatix_s5k4h7yx_front_liveshot \
-    libchromatix_s5k4h7yx_front_preview \
-    libchromatix_s5k4h7yx_front_snapshot \
-    libchromatix_s5k4h7yx_front_video \
-    libchromatix_s5k4h7yx_front_zsl_preview \
-    libchromatix_s5k4h7yx_front_zsl_video \
-    libmmcamera_s5k4h7yx_front
-
-PRODUCT_PACKAGES += \
-    libactuator_dw9768_tele \
-    libchromatix_s5k4h7yx_tele_common \
-    libchromatix_s5k4h7yx_tele_cpp_liveshot \
-    libchromatix_s5k4h7yx_tele_cpp_preview \
-    libchromatix_s5k4h7yx_tele_cpp_snapshot \
-    libchromatix_s5k4h7yx_tele_cpp_video \
-    libchromatix_s5k4h7yx_tele_postproc \
-    libchromatix_s5k4h7yx_tele_liveshot \
-    libchromatix_s5k4h7yx_tele_preview \
-    libchromatix_s5k4h7yx_tele_snapshot \
-    libchromatix_s5k4h7yx_tele_video \
-    libchromatix_s5k4h7yx_tele_zsl_preview \
-    libchromatix_s5k4h7yx_tele_zsl_video \
-    libmmcamera_s5k4h7yx_tele
-
-PRODUCT_PACKAGES += \
-    libactuator_dw9768_wide \
-    libchromatix_s5k4h7yx_uwide_common \
-    libchromatix_s5k4h7yx_uwide_cpp_liveshot \
-    libchromatix_s5k4h7yx_uwide_cpp_preview \
-    libchromatix_s5k4h7yx_uwide_cpp_snapshot \
-    libchromatix_s5k4h7yx_uwide_cpp_video \
-    libchromatix_s5k4h7yx_uwide_postproc \
-    libchromatix_s5k4h7yx_uwide_liveshot \
-    libchromatix_s5k4h7yx_uwide_preview \
-    libchromatix_s5k4h7yx_uwide_snapshot \
-    libchromatix_s5k4h7yx_uwide_video \
-    libchromatix_s5k4h7yx_uwide_zsl_preview \
-    libchromatix_s5k4h7yx_uwide_zsl_video \
-    libmmcamera_s5k4h7yx_uwide
-endif
