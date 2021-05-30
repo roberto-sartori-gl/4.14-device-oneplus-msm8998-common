@@ -1,5 +1,5 @@
-ifneq ($(wildcard device/sony/common/hardware/qcom/custom.mk),)
-    include device/sony/common/hardware/qcom/custom.mk
+ifneq ($(wildcard device/oneplus/msm8998-common/hardware/qcom/custom.mk),)
+    include device/oneplus/msm8998-common/hardware/qcom/custom.mk
 else
 # Board platforms lists to be used for
 # TARGET_BOARD_PLATFORM specific featurization
@@ -25,11 +25,11 @@ endif
 OMX_VIDEO_PATH := mm-video-v4l2
 
 SRC_CAMERA_HAL_DIR ?= vendor/qcom/opensource/camera
-SRC_DISPLAY_HAL_DIR := vendor/qcom/opensource/display/sm8150
+SRC_DISPLAY_HAL_DIR := vendor/qcom/opensource/display
 SRC_MEDIA_HAL_DIR := $(QCOM_MEDIA_ROOT)
-TARGET_KERNEL_VERSION := $(SOMC_KERNEL_VERSION)
+TARGET_KERNEL_VERSION := 4.14
 
-include device/sony/common/hardware/qcom/utils.mk
+include device/oneplus/msm8998-common/hardware/qcom/utils.mk
 
 ifeq ($(TARGET_USES_AOSP_AUDIO_HAL),true)
 audio-hal := hardware/qcom/audio

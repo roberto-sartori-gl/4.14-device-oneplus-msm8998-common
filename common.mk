@@ -13,14 +13,9 @@
 # limitations under the License.
 
 # Common path
-COMMON_PATH := device/sony/common
+COMMON_PATH := device/oneplus/msm8998-common
 
-# Everything prior to kernel 4.19 uses the sm8150 display HAL
-ifneq ($(filter 4.14, $(SOMC_KERNEL_VERSION)),)
 display_platform := sm8150
-else
-display_platform := sm8250
-endif
 
 # Enable building packages from device namspaces.
 # Might be temporary! See:
@@ -29,8 +24,8 @@ PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \
     $(PLATFORM_COMMON_PATH) \
     vendor/qcom/opensource/core-utils \
-    vendor/qcom/opensource/display/$(display_platform) \
-    vendor/qcom/opensource/display-commonsys-intf/$(display_platform)
+    vendor/qcom/opensource/display/ \
+    vendor/qcom/opensource/display-commonsys-intf/
 
 # Build scripts
 SONY_CLEAR_VARS := $(COMMON_PATH)/sony_clear_vars.mk
@@ -75,7 +70,7 @@ PRODUCT_BUILD_BOOT_IMAGE := true
 # Our devices do not support it
 PRODUCT_BUILD_VENDOR_BOOT_IMAGE := false
 
-KERNEL_PATH := kernel/sony/msm-$(SOMC_KERNEL_VERSION)
+KERNEL_PATH := kernel/sony/msm-4.14
 # Sanitized prebuilt kernel headers
 -include $(KERNEL_PATH)/common-headers/KernelHeaders.mk
 
@@ -83,7 +78,7 @@ KERNEL_PATH := kernel/sony/msm-$(SOMC_KERNEL_VERSION)
 # under kernel/sony/msm-X.Y/kernel-headers are chosen
 SOONG_CONFIG_NAMESPACES += qti_kernel_headers
 SOONG_CONFIG_qti_kernel_headers := version
-SOONG_CONFIG_qti_kernel_headers_version := $(SOMC_KERNEL_VERSION)
+SOONG_CONFIG_qti_kernel_headers_version := 4.14
 
 # Codecs Configuration
 PRODUCT_COPY_FILES += \
@@ -176,12 +171,10 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/vendor/etc/apns-conf.xml:system/etc/apns-conf.xml
 endif #USE_SODP_APNS
 
-$(call inherit-product, device/sony/common/common-init.mk)
-$(call inherit-product, device/sony/common/common-odm.mk)
-$(call inherit-product, device/sony/common/common-odm-camx.mk)
-$(call inherit-product, device/sony/common/common-odm-mmcam.mk)
-$(call inherit-product, device/sony/common/common-packages.mk)
-$(call inherit-product, device/sony/common/common-perm.mk)
-$(call inherit-product, device/sony/common/common-prop.mk)
-$(call inherit-product, device/sony/common/common-treble.mk)
-$(call inherit-product, device/sony/common/common-binds.mk)
+$(call inherit-product, device/oneplus/msm8998-common/common-init.mk)
+$(call inherit-product, device/oneplus/msm8998-common/common-odm.mk)
+$(call inherit-product, device/oneplus/msm8998-common/common-odm-mmcam.mk)
+$(call inherit-product, device/oneplus/msm8998-common/common-packages.mk)
+$(call inherit-product, device/oneplus/msm8998-common/common-perm.mk)
+$(call inherit-product, device/oneplus/msm8998-common/common-prop.mk)
+$(call inherit-product, device/oneplus/msm8998-common/common-treble.mk)
