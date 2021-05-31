@@ -268,13 +268,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "vendor.somc.hardware.miscta@1.0-service.rc",
-    src: "vendor/etc/init/vendor.somc.hardware.miscta@1.0-service.rc",
-    sub_dir: "init",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "vendor.somc.hardware.modemswitcher@1.0-service.rc",
     src: "vendor/etc/init/vendor.somc.hardware.modemswitcher@1.0-service.rc",
     sub_dir: "init",
@@ -298,20 +291,6 @@ prebuilt_etc {
 prebuilt_etc {
     name: "tftp_server.rc",
     src: "vendor/etc/init/tftp_server.rc",
-    sub_dir: "init",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "bindmount-apps.rc",
-    src: "vendor/etc/init/bindmount-apps.rc",
-    sub_dir: "init",
-    vendor: true,
-}
-
-prebuilt_etc {
-    name: "bindmount-misc.rc",
-    src: "vendor/etc/init/bindmount-misc.rc",
     sub_dir: "init",
     vendor: true,
 }

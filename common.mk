@@ -140,7 +140,6 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Depend on symlink creation in /vendor:
 PRODUCT_PACKAGES += \
-    adreno_symlinks \
     camera_symlinks \
     qca_cld3_symlinks \
     rfsa_symlinks \

@@ -48,7 +48,6 @@ PRODUCT_PACKAGES += \
     sdsp-sensorspdr.rc \
     sensors.rc \
     sscrpcd.rc \
-    tad.rc \
     ta_qmi.rc \
     tftp_server.rc \
     wpa_supplicant.rc
@@ -74,16 +73,5 @@ endif
 
 # modemswitcher
 PRODUCT_PACKAGES += \
-    vendor.somc.hardware.miscta@1.0-service.rc \
     vendor.somc.hardware.modemswitcher@1.0-service.rc \
     init.sony-modem-switcher.rc
-
-# IMS/CnE bind-mount - Frameworks and permissions
-PRODUCT_PACKAGES += \
-    bindmount-misc.rc
-
-# IMS/CnE bind-mount - APK apps/priv-apps
-ifneq ($(TARGET_USES_ODM_APPS_BINDMOUNT),false)
-PRODUCT_PACKAGES += \
-    bindmount-apps.rc
-endif
