@@ -1,4 +1,4 @@
-service spu_service /odm/bin/hw/vendor.qti.spu@1.0-service
+service spu_service /vendor/bin/hw/vendor.qti.spu@1.0-service
     class hal
     user system
     group system
