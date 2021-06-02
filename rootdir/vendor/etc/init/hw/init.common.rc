@@ -245,14 +245,18 @@ on boot
     mkdir /dev/socket/RIDL 2770 system system
 
     # Required for fingerprint
-    chown system system /sys/bus/spi/devices/spi0.1/clk_enable
-    chmod 0660 /sys/bus/spi/devices/spi0.1/clk_enable
-    chown system system /sys/devices/platform/soc/fpc1145_device/spi_prepare
-    chown system system /sys/devices/platform/soc/fpc1145_device/wakeup_enable
-    chown system system /sys/devices/platform/soc/fpc1145_device/irq
-    chmod 0660 /sys/devices/platform/soc/fpc1145_device/wakeup_enable
-    chmod 0660 /sys/devices/platform/soc/fpc1145_device/spi_prepare
-    chmod 0660 /sys/devices/platform/soc/fpc1145_device/irq
+    chmod 0664 /sys/devices/platform/soc/soc:fpc_fpc1020/irq
+    chown system system /sys/devices/platform/soc/soc:fpc_fpc1020/irq
+    chmod 0660 /sys/devices/platform/soc/soc:fpc_fpc1020/report_home
+    chown system system /sys/devices/platform/soc/soc:fpc_fpc1020/report_home
+    chmod 0660 /sys/devices/platform/soc/soc:fpc_fpc1020/report_key
+    chown system system /sys/devices/platform/soc/soc:fpc_fpc1020/report_key
+    chmod 0660 /sys/devices/platform/soc/soc:fpc_fpc1020/update_info
+    chown system system /sys/devices/platform/soc/soc:fpc_fpc1020/update_info
+    chmod 0660 /sys/devices/platform/soc/soc:fpc_fpc1020/screen_state
+    chown system system /sys/devices/platform/soc/soc:fpc_fpc1020/screen_state
+    chmod 0660 /sys/devices/platform/soc/soc:fingerprint_detect/sensor_version
+    chown system system /sys/devices/platform/soc/soc:fingerprint_detect/sensor_version
 
     # Bluetooth modules
     chown system system /sys/module/bluetooth/parameters/disable_ertm

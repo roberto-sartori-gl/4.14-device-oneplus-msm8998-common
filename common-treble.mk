@@ -98,7 +98,7 @@ endif
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.sony
+    android.hardware.biometrics.fingerprint@2.1-service
 
 # Gatekeeper passthrough service
 PRODUCT_PACKAGES += \

@@ -18,11 +18,11 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.biometrics.fingerprint</name>
+        <name>vendor.oneplus.fingerprint.extension</name>
         <transport>hwbinder</transport>
-        <version>2.1</version>
+        <version>1.0</version>
         <interface>
-            <name>IBiometricsFingerprint</name>
+            <name>IVendorFingerprintExtensions</name>
             <instance>default</instance>
         </interface>
     </hal>
