@@ -58,14 +58,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libdataitems
 
-# Miscta
-PRODUCT_PACKAGES += \
-    libMiscTaWrapper \
-    libmiscta \
-    libta \
-    ta_qmi_service \
-    tad_static
-
 # Audio
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.dsp@1.0 \

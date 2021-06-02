@@ -48,7 +48,6 @@ PRODUCT_PACKAGES += \
     sdsp-sensorspdr.rc \
     sensors.rc \
     sscrpcd.rc \
-    ta_qmi.rc \
     tftp_server.rc \
     wpa_supplicant.rc
 
